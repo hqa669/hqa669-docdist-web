@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> medicare_web_api </title>  
+    <style>
+      h1{
+        font-size: 80px;
+        font-family: Roboto;
+        font-weight: normal;
+        color: rgb[0,0,0];
+        text-align: center;
+      }
+      #sefie {
+        width: 100%;
+        height = 360 px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Medicare API</h1>
+    
+    <img id ="sefie" src="https://hqa669-docdist-web--qinanghu.repl.co/static//hospital_pic.jpg"
+      height="320">
+    <h2>Health Facilities Directory</h2>
+    <table>
+      <tr>
+        {% for header_hf in heading_hf %}
+        <th> {{header_hf}}</th>
+        {% endfor %}
+      </tr>
+      {% for row_hf in data_hf %}
+      <tr>
+        {% for cell_hf in row_hf%}
+        <td>{{cell_hf}}</td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </table>
+    <h2>Health Care Provider</h2>
+    <table>
+      <tr>
+        {% for header_hp in heading_hp %}
+        <th> {{header_hp}}</th>
+        {% endfor %}
+      </tr>
+      {% for row_hp in data_hp %}
+      <tr>
+        {% for cell_hp in row_hp%}
+        <td>{{cell_hp}}</td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </table>
+    <h2>Empolyer groups</h2>
+    <table>
+      <tr>
+        {% for header_hp in heading_hp %}
+        <th> {{header_hp}}</th>
+        {% endfor %}
+      </tr>
+      {% for row_hp in data_hp %}
+      <tr>
+        {% for cell_hp in row_hp%}
+        <td>{{cell_hp}}</td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </table>
+    
+  </body>
+
+  
+</html>
